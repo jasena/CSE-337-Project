@@ -15,7 +15,9 @@
 
 		<div class="span1" style="float: right; text-align: right;">
 			<%= link_to "Edit".html_safe, edit_exercise_path(exercise) %>
+			<%= link_to "Delete".html_safe, exercise_path(exercise), :method => "delete" %>
 		</div>
+		
 
 
     </div>
