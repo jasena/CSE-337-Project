@@ -1,16 +1,17 @@
 <h3> Workouts this Month</h3>
 <hr>
-
+<%= link_to 'New Exercise', new_exercise_path %>
+<br>
 <% @exercises.each do |exercise|  %>
     <div class="span2 hero-unit">
-      <div class="span2" style="float:left">
-        <span class="title"> Workout: <%=  exercise.name %> </span>
+      <div class="name span2" style="float:left">
+        <strong> Workout: </strong><%=  exercise.name %> 
       </div>
-      <div class="span2" style="float:left">
-        <span class="title"> Type: <%= exercise.workout_type %></span>
+      <div class="workout_type span2" style="float:left">
+        <strong> Type: </strong><%= exercise.workout_type %>
       </div>
-      <div class="span2">
-        <span class="rating"> Duration(min:): <%= exercise.duration %> </span>
+      <div class="duration span2">
+        <strong> Duration(min): </strong><%= exercise.duration %> 
       </div>
 
 		<div class="span1" style="float: right; text-align: right;">
