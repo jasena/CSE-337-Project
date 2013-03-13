@@ -20,5 +20,17 @@ class ExercisesController < ApplicationController
     @exercises.destroy unless @exercises.nil?
     flash[:notice] = "Deleted the movie titled: #{@exercises.id}"
     redirect_to root_url
-end
+  end
+  
+  def new
+    @exercises = Exercise.new()
+  end
+  
+  def create
+    @exercises = Exercise.new(params[:exercises])
+    @exercises.save
+    redirect_to root_url
+  end
+  
+  
 end
