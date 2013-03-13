@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130312235259) do
+ActiveRecord::Schema.define(:version => 20130313005603) do
 
   create_table "exercises", :force => true do |t|
     t.text     "name"
-    t.text     "type"
+    t.text     "workout_type"
     t.integer  "duration"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
 end

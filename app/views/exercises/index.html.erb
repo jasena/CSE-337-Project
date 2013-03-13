@@ -3,13 +3,13 @@
 <% @exercises.each do |exercise|  %>
     <div class="span10 hero-unit">
       <div class="span6" style="float:left">
-        <span class="title"> Workout: <%=  exercises.name %> </span>
+        <span class="title"> Workout: <%=  exercise.name %> </span>
       </div>
       <div class="span3" style="float:right">
-        <span class="title"> Type: <%= exercises.type %></span>
+        <span class="title"> Type: <%= exercise.workout_type %></span>
       </div>
       <div class="span9">
-        <span class="rating"> Duration(min:): <%= exercises.duration %> </span>
+        <span class="rating"> Duration(min:): <%= exercise.duration %> </span>
       </div>
 
     </div>
