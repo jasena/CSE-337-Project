@@ -1,9 +1,8 @@
 <h2> Edit the Workout </h2>
 <hr>
 <div class="span10" style="float:right">
-	<% kinds = ["Cardio", "Weight lifting"] %>
   <div class="span9">
-    <%= form_for(@exercises, :html => { :class => "form-horizontal" } ) do |f| %>
+    <%= form_for(@exercise, :html => { :class => "form-horizontal" } ) do |f| %>
     <div class="control-group">
       <%= f.label :name, class: "control-label" %>
       <div class="controls">
@@ -19,7 +18,7 @@
     <div class="control-group">
       <%= f.label :workout_type, class: "control-label" %>
       <div class="controls">
-        <%= f.select(:workout_type, kinds) %>
+        <%= f.select(:workout_type, options_for_select([%w"Cardio", %w"Weight-Lifting"])) %>
       </div>
     </div>
 

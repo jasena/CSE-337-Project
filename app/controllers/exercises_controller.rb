@@ -4,31 +4,31 @@ class ExercisesController < ApplicationController
   end
   
   def edit
-    @exercises = Exercise.find_by_id(params[:id])
+    @exercise = Exercise.find_by_id(params[:id])
   end
   
   def update
-    @exercises = Exercise.find(params[:id])
-    if @exercises.update_attributes(params[:exercises])
-      flash[:notice] = "Successfully updated workout titled: #{@exercises}"
+    @exercise = Exercise.find(params[:id])
+    if @exercise.update_attributes(params[:exercise])
+      flash[:notice] = "Successfully updated workout titled: #{@exercise.id}"
     end
     redirect_to root_url
   end
   
   def destroy
-    @exercises = Exercise.find(params[:id])
-    @exercises.destroy unless @exercises.nil?
-    flash[:notice] = "Deleted the movie titled: #{@exercises.id}"
+    @exercise = Exercise.find(params[:id])
+    @exercise.destroy unless @exercise.nil?
+    flash[:notice] = "Deleted the movie titled: #{@exercise.id}"
     redirect_to root_url
   end
   
   def new
-    @exercises = Exercise.new()
+    @exercise = Exercise.new()
   end
   
   def create
-    @exercises = Exercise.new(params[:exercises])
-    @exercises.save
+    @exercise = Exercise.new(params[:exercise])
+    @exercise.save
     redirect_to root_url
   end
   
