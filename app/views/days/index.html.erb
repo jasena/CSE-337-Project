@@ -1,0 +1,38 @@
+<h3> Workouts this Month</h3>
+<hr>
+<!--<%= link_to 'New Day', new_day_path %>-->
+<br>
+<div class="span12">
+<% @days.each do |day|  %>
+
+    <div class="span2 hero-unit">
+    	<!--<%day.emp = false%>
+    	<%if day.emp == false%>
+    	  Workouts
+    	<%else%>
+    	  No Workouts
+    	  <%end%>-->
+      <div class="name span2" style="float:right; text-align: right; vertical-align:text-top;">
+        <strong>  </strong><%= "#{day.id}" %> <!--Workouts:   day.exercises-->
+      </div>
+
+      <div class="span1" style="float: right; text-align: right;">
+      	<!--<%= link_to "Edit", edit_workout_path(day.id) %>-->
+      </div>
+      
+      <div class="span1" style="float: right; text-align: right;">
+      	<!--<%#= link_to 'Delete', {:controller => "workouts", :action => 'destroy', :id => day.id}, :method => :delete %>-->
+      	
+      </div>
+      
+      <div class="span1" style="float: right; text-align: right;">
+      	<%= link_to "Show", day_path(day.id) %>
+      </div>
+      
+      
+    </div>
+	
+
+<% end %>
+</div>
+<br>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Exercises:</b>
+  <%= @day.exercises %>
+</p>
+<%= link_to 'New Workout', new_workout_path %>	 |
+<%= link_to 'Back', days_path %>
+<br>
+<!--<%@work = Workout.find(:all, :conditions =>[":workout_date = ?", @day.date])%>-->
+<%@work = Workout.where("workout_date = ?", @day.date)%>
+
+<% @work.each do |works| %>
+  <div class="span10 hero-unit">
+      <div class="span6" style="float:left">
+        <span class="title"> Name: <%= works.name %> </span>
+      </div>
+      <div class="span3" style="float:right">
+        <span class="title"> Workout date: <%= works.workout_date %></span>
+      </div>
+      <div class="span9">
+        <span class="rating"> Type of Workout: <%= works.kind %> </span>
+      </div>
+      <div class="span9">
+        <span class="rating"> Duration of Workout: <%= works.duration %> </span>
+      </div>
+      <div class="span1" style="float: right; text-align: right;">
+        <%= link_to 'Edit'.html_safe, edit_workout_path(works) %>
+        <%= link_to "Delete".html_safe, workout_path(works), method: :delete %>
+      </div>
+      <!--<% @day.emp = false%>Boolean should be false-->
+  </div>
+
+<%end%>
+
+
+

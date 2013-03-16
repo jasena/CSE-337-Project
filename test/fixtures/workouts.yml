@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  kind: MyString
+  workout_date: 2013-03-13
+  duration: MyString
+
+two:
+  name: MyString
+  kind: MyString
+  workout_date: 2013-03-13
+  duration: MyString
