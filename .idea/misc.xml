@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectResources">
-    <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
+    <default-html-doctype>jar:file:\C:\Program Files (x86)\JetBrains\RubyMine 4.5.4\lib\rubymine.jar!\resources\html5-schema\html5.rnc</default-html-doctype>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="ruby-1.9.3-p125" project-jdk-type="RUBY_SDK" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500">
+  <component name="ProjectRootManager" version="2" project-jdk-name="ruby-1.9.3-p374" project-jdk-type="RUBY_SDK" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
     <option name="mySSHConnectionTimeout" value="30000" />
@@ -20,14 +19,8 @@
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
 </project>
 
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectRootManager" version="2" project-jdk-name="ruby-1.9.3-p392" project-jdk-type="RUBY_SDK" />
-</project>
-
->>>>>>> Iteration 1
