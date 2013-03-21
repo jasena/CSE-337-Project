@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ques1: 1.5
+  ques2: 1.5
+  ques3: 1.5
+  ques4: 1.5
+  ques5: 1.5
+  ques6: 1.5
+  ques7: 1.5
+  ques8: 1.5
+  ques9: 1.5
+  ques10: 1.5
+  ques11: 1.5
+  ques12: 1.5
+
+two:
+  ques1: 1.5
+  ques2: 1.5
+  ques3: 1.5
+  ques4: 1.5
+  ques5: 1.5
+  ques6: 1.5
+  ques7: 1.5
+  ques8: 1.5
+  ques9: 1.5
+  ques10: 1.5
+  ques11: 1.5
+  ques12: 1.5

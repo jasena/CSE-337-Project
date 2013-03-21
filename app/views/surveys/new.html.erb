@@ -1,0 +1,93 @@
+<%= form_for @survey do |f| %>
+
+    <h2>Take Survey</h2>
+    <ol>
+    <li>My bone structure is: </li>
+      <%= radio_button("survey", "ques1", 0.08) %>
+      <%= label_tag "very large" %>
+      <%= radio_button("survey", "ques1", 0.17) %>
+      <%= label_tag "large to medium" %>
+      <%= radio_button("survey", "ques1", 0.25) %>
+      <%= label_tag "small to frail" %>
+    <li>My body tends towards: </li>
+      <%= radio_button("survey", "ques2", 0.08) %>
+      <%= label_tag "carrying too much fat" %>
+      <%= radio_button("survey", "ques2", 0.17) %>
+      <%= label_tag "being lean and muscular" %>
+      <%= radio_button("survey", "ques2", 0.25) %>
+      <%= label_tag "being too skinny" %>
+    <li>My body looks: </li>
+      <%= radio_button("survey", "ques3", 0.08) %>
+      <%= label_tag "round and soft" %>
+      <%= radio_button("survey", "ques3", 0.17) %>
+      <%= label_tag "square and rugged" %>
+      <%= radio_button("survey", "ques3", 0.25) %>
+      <%= label_tag "long and tenuous" %>
+    <li>As a child I was: </li>
+      <%= radio_button("survey", "ques4", 0.08) %>
+      <%= label_tag "chubby" %>
+      <%= radio_button("survey", "ques4", 0.17) %>
+      <%= label_tag "normal" %>
+      <%= radio_button("survey", "ques4", 0.25) %>
+      <%= label_tag "too thin" %>
+    <li>My activity level is: </li>
+      <%= radio_button("survey", "ques5", 0.08) %>
+      <%= label_tag "sedentary" %>
+      <%= radio_button("survey", "ques5", 0.17) %>
+      <%= label_tag "fairly active" %>
+      <%= radio_button("survey", "ques5", 0.25) %>
+      <%= label_tag "over active, can't sit still" %>
+    <li>My approach to life is: </li>
+      <%= radio_button("survey", "ques6", 0.08) %>
+      <%= label_tag "laid back" %>
+      <%= radio_button("survey", "ques6", 0.17) %>
+      <%= label_tag "dynamic" %>
+      <%= radio_button("survey", "ques6", 0.25) %>
+      <%= label_tag "worrisome" %>
+    <li>My metabolism is: </li>
+      <%= radio_button("survey", "ques7", 0.08) %>
+      <%= label_tag "slow" %>
+      <%= radio_button("survey", "ques7", 0.17) %>
+      <%= label_tag "just right" %>
+      <%= radio_button("survey", "ques7", 0.25) %>
+      <%= label_tag "too fast" %>
+    <li>People tell me: </li>
+      <%= radio_button("survey", "ques8", 0.08) %>
+      <%= label_tag "I should lose some weight" %>
+      <%= radio_button("survey", "ques8", 0.17) %>
+      <%= label_tag "stay the same, that I look fine" %>
+      <%= radio_button("survey", "ques8", 0.25) %>
+      <%= label_tag "I should gain some weight" %>
+    <li>If you encircle your wrist with your other hand's middle finger and thumb: </li>
+      <%= radio_button("survey", "ques9", 0.08) %>
+      <%= label_tag "middle finger and thumb do not touch" %>
+      <%= radio_button("survey", "ques9", 0.17) %>
+      <%= label_tag "middle finger and thumb just touch" %>
+      <%= radio_button("survey", "ques9", 0.25) %>
+      <%= label_tag "middle finger and thumb overlap" %>
+    <li>Concerning my weight, I: </li>
+      <%= radio_button("survey", "ques10", 0.08) %>
+      <%= label_tag "gain weight easily, but find it hard to lose" %>
+      <%= radio_button("survey", "ques10", 0.17) %>
+      <%= label_tag "gain or lose weight fairly easily / usually stay about the
+      same" %>
+      <%= radio_button("survey", "ques10", 0.25) %>
+      <%= label_tag "have trouble gaining weight" %>
+    <li>I am hungry: </li>
+      <%= radio_button("survey", "ques11", 0.08) %>
+      <%= label_tag "almost all the time" %>
+      <%= radio_button("survey", "ques11", 0.17) %>
+      <%= label_tag "just at meal times" %>
+      <%= radio_button("survey", "ques11", 0.25) %>
+      <%= label_tag "rarely" %>
+    <li>People would describe me as an: </li>
+      <%= radio_button("survey", "ques12", 0.08) %>
+      <%= label_tag "emotional person" %>
+      <%= radio_button("survey", "ques12", 0.17) %>
+      <%= label_tag "physical person" %>
+      <%= radio_button("survey", "ques12", 0.25) %>
+      <%= label_tag "intellectual person" %>
+    </ol>
+    <%= f.submit %>
+
+<% end %>

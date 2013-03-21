@@ -1,10 +1,10 @@
 CSE337Project::Application.routes.draw do
   resources :days
 
-
   resources :workouts
   root :to => 'days#index'
 
+  resources :surveys
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

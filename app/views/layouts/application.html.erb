@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -38,7 +37,8 @@
                     <a class="brand" href="#">Movie Manager</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li class="active"><a href="#">W/O Log</a></li>
+                            <li class="active"><%= link_to 'W/O Log'.html_safe, days_path %></li>
+                            <li><%= link_to 'Survey'.html_safe, new_survey_path %></li>
                             <li><a href="#f_log">Food Log</a></li>
                             <li><a href="#wo_prog">W/O Program</a></li>
                             <li class="dropdown">
@@ -84,90 +84,3 @@
 
     </body>
 </html>
-=======
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <%= stylesheet_link_tag "application", :media => "all" %>
-		<%= javascript_include_tag "application" %>
-        <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
-
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="#">Movie Manager</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="#">W/O Log</a></li>
-                            <li><a href="#f_log">Food Log</a></li>
-                            <li><a href="#wo_prog">W/O Program</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Food Menu<b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#he_tips">H.E. tips</a></li>
-                                    <li><a href="#wte_wnte">WTE/WNTE</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#prog_chrt">Prog. Chart</a></li>
-                            <li><a href="#motivate">Motivation</a></li>
-                        </ul>
-                        
-                    </div><!--/.nav-collapse -->
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-          <!-- add flash message logic here -->
-          <% flash.each do |type, msg| %>
-              <% if msg.is_a?(String) %>
-                  <div class="alert alert-<%= type == :notice ? "success" : "error" %>">
-                    <a class="close" data-dismiss="alert">&#215;</a>
-                    <%= content_tag :div, msg, :id => "flash_#{type}" %>
-                  </div>
-              <% end %>
-          <% end %>
-
-          <!-- this is our content area -->
-          <div style="min-height: 760px;">
-            <%= yield %>
-          </div>
-
-          <!-- this is our footer -->
-          <div style="text-align: center; margin-top: 20px;">
-            <hr>
-            <footer>
-                <p>&copy; CSE/CIT337 Winter 2013</p>
-            </footer>
-          </div>
-        </div> <!-- /container -->
-
-    </body>
-</html>
->>>>>>> Iteration 1

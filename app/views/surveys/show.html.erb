@@ -1,0 +1,16 @@
+<div class="b_type">
+<%= link_to 'Back'.html_safe, days_path %>
+</div>
+
+<h2>Body Type</h2>
+
+<hr>
+<% score = @survey.ques1 + @survey.ques2 + @survey.ques3 + @survey.ques4 + @survey.ques5 + @survey.ques6 + @survey.ques7 + @survey.ques8 + @survey.ques9 + @survey.ques10 + @survey.ques11 + @survey.ques12 %>
+<% b_type = ""
+    name = case
+    when score >= 0.5 && score <= 1.33 then b_type = "endomorph"
+    when score >= 1.34 && score <= 2.16 then b_type = "mesomorph"
+    when score >= 2.17 then b_type = "ectomorph"
+    end %>
+<p>Score: <%= score %></p>
+<p>You are an: <%= b_type %></p>
