@@ -1,6 +1,7 @@
 class SurveysController < ApplicationController
   def new
       @survey = Survey.new
+      @defs = Def.new
   end
 
   def create
@@ -16,5 +17,6 @@ class SurveysController < ApplicationController
 
   def show
     @survey = Survey.find(params[:id])
+    @defs = Def.first
   end
 end

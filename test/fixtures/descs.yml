@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  endo: MyText
+  meso: MyText
+  ecto: MyText
+
+two:
+  endo: MyText
+  meso: MyText
+  ecto: MyText
