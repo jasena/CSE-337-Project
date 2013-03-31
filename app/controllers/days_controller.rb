@@ -1,8 +1,13 @@
 class DaysController < ApplicationController
   # GET /days
   # GET /days.json
+  @@dayspermonth = [0,31,28,31,30,31,30,31,31,30,31,30,31]
   def index
-    @days = Day.all
+    @month = 3
+    check
+
+
+    #@days = Day.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -78,6 +83,18 @@ class DaysController < ApplicationController
     respond_to do |format|
       format.html { redirect_to days_url }
       format.json { head :no_content }
+    end
+  end
+
+  def check
+    @days = Day.all
+    if @days.blank?
+      for i in (1..@@dayspermonth[@month])
+        d = '%02i' % i
+        m = '%02i' % @month
+        Day.create(:exercises  => '', :date =>"2013-#{m}-#{d}")
+      end
+      @days = Day.all
     end
   end
 end

@@ -2,7 +2,19 @@
 <hr>
 <!--<%= link_to 'New Day', new_day_path %>-->
 <br>
+
 <div class="span12">
+<% time = Time.new %>
+<% month_choices = ["January","February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"] %>
+<% mon = @month %>
+
+
+<%= form_tag(days_path, :method => "get") do %>
+  <p>
+    <%= select_tag(:month, options_for_select(month_choices, month_choices[time.month-1]).html_safe) %>
+    <%= submit_tag "Change", :name => nil %>
+  </p>
+<% end %>
 <% @days.each do |day|  %>
 
     <div class="span2 hero-unit">
