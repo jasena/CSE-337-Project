@@ -3,10 +3,11 @@ class DaysController < ApplicationController
   # GET /days.json
   @@dayspermonth = [0,31,28,31,30,31,30,31,31,30,31,30,31]
   @@month_choices = ["January","February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"]
-  @days = Day.search("January")
+
 
 
   def index
+    @days = Day.search("January")
     check
     time = Time.new
 
@@ -117,7 +118,7 @@ class DaysController < ApplicationController
         #m = '%02i' % @month
         #Day.create(:exercises  => '', :date =>"2013-#{m}-#{d}", :month => @@month_choices[@@mon])
         t = d+i*(60*60*24)
-        Day.create(:exercises  => "#{i}", :date => ((t).strftime "%Y-%m-%d").to_s, :month => (t.strftime "%B"))
+        Day.create(:exercises  => "", :date => ((t).strftime "%Y-%m-%d").to_s, :month => (t.strftime "%B"))
       end
       #@days = Day.all#(:conditions => { :date=> m })
     end

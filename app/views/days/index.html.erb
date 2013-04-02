@@ -3,6 +3,7 @@
     <% @month = time.strftime "%B" %>
     <% end %>
 <h3> Workouts for <%= "#{@month}" %> 2013</h3>
+<%= link_to 'New Workout', new_workout_path %>
 <hr>
 <!--<%= link_to 'New Day', new_day_path %>-->
 <br>
