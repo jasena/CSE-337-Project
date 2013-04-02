@@ -2,12 +2,32 @@ class DaysController < ApplicationController
   # GET /days
   # GET /days.json
   @@dayspermonth = [0,31,28,31,30,31,30,31,31,30,31,30,31]
+  @@month_choices = ["January","February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"]
+  @days = Day.search("January")
+
+
   def index
-    @month = 3
     check
+    time = Time.new
 
+    #if params[:search]
+    #  empty_search = params[:search].keep_if {|k, val| !val.blank?}.empty?
+   # else
+    #  empty_search = true
+    #end
 
-    #@days = Day.all
+    if params[:search].nil?
+      # no search was submitted, or search params are all blank
+      @days = Day.search(time.strftime "%B")
+
+    else
+      # a search was submitted
+      @days = Day.search(params[:search])
+    end
+    @month =   params[:search]
+
+    #@days = Day.search("April")
+    #@days = Day.search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -87,14 +107,19 @@ class DaysController < ApplicationController
   end
 
   def check
-    @days = Day.all
+    d = Time.new(2013)
+
+    #m = '%02i' % @@mon
+    @days = Day.all#(:conditions => { :month=> @@month_choices[m.to_i] })
     if @days.blank?
-      for i in (1..@@dayspermonth[@month])
-        d = '%02i' % i
-        m = '%02i' % @month
-        Day.create(:exercises  => '', :date =>"2013-#{m}-#{d}")
+      for i in (0..364)#@@dayspermonth[@month]
+        #d = '%02i' % i
+        #m = '%02i' % @month
+        #Day.create(:exercises  => '', :date =>"2013-#{m}-#{d}", :month => @@month_choices[@@mon])
+        t = d+i*(60*60*24)
+        Day.create(:exercises  => "#{i}", :date => ((t).strftime "%Y-%m-%d").to_s, :month => (t.strftime "%B"))
       end
-      @days = Day.all
+      #@days = Day.all#(:conditions => { :date=> m })
     end
   end
 end

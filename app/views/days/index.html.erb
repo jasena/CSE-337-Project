@@ -1,20 +1,28 @@
-<h3> Workouts this Month</h3>
+<% time = Time.now %>
+<% if @month.nil? %>
+    <% @month = time.strftime "%B" %>
+    <% end %>
+<h3> Workouts for <%= "#{@month}" %> 2013</h3>
 <hr>
 <!--<%= link_to 'New Day', new_day_path %>-->
 <br>
 
 <div class="span12">
-<% time = Time.new %>
-<% month_choices = ["January","February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"] %>
-<% mon = @month %>
 
+<% @@month_choices = ["January","February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"] %>
+
+
+  <%#= form_for(@days, :html => { :class => "form-horizontal" } ) do |f| %>
+
+  <%#end%>
 
 <%= form_tag(days_path, :method => "get") do %>
   <p>
-    <%= select_tag(:month, options_for_select(month_choices, month_choices[time.month-1]).html_safe) %>
-    <%= submit_tag "Change", :name => nil %>
+    <%= select_tag(:search, options_for_select(@@month_choices, :selected => params[:search])) %><!--month_choices[time.month-1] -->
+    <%= submit_tag "Change month", :name => nil %>
   </p>
 <% end %>
+
 <% @days.each do |day|  %>
 
     <div class="span2 hero-unit">
@@ -25,7 +33,7 @@
     	  No Workouts
     	  <%end%>-->
       <div class="name span2" style="float:right; text-align: right; vertical-align:text-top;">
-        <strong>  </strong><%= "#{day.id}" %> <!--Workouts:   day.exercises-->
+        <strong>  </strong><%= "#{day.date.last(2)}" %> <!--Workouts:   day.exercises-->
       </div>
 
       <div class="span1" style="float: right; text-align: right;">
@@ -38,7 +46,7 @@
       </div>
       
       <div class="span1" style="float: right; text-align: right;">
-      	<%= link_to "Show", day_path(day.id) %>
+      	<%= link_to "Show", day_path(day.id) %>           <!--date.last(2)-->
       </div>
       
       
