@@ -1,8 +1,14 @@
 CSE337Project::Application.routes.draw do
+  authenticated :user do
+    root :to => 'days#index'
+  end
+  root :to => "days#index"
+  devise_for :users
+  resources :users
   resources :days
 
   resources :workouts
-  root :to => 'days#index'
+  #root :to => 'days#index'
 
   resources :surveys
   # The priority is based upon order of creation:

@@ -27,35 +27,38 @@
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
         <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="#">Movie Manager</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><%= link_to 'W/O Log'.html_safe, days_path %></li>
-                            <li><%= link_to 'Survey'.html_safe, new_survey_path %></li>
-                            <li><a href="#f_log">Food Log</a></li>
-                            <li><a href="#wo_prog">W/O Program</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Food Menu<b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#he_tips">H.E. tips</a></li>
-                                    <li><a href="#wte_wnte">WTE/WNTE</a></li>
+                    <div class="navbar-inner">
+                        <div class="container">
+                            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </a>
+                            <a class="brand" href="#">Movie Manager</a>
+                            <div class="nav-collapse collapse">
+                                <ul class="nav">
+                                    <li class="active"><%= link_to 'W/O Log'.html_safe, days_path %></li>
+                                    <li><%= link_to 'Survey'.html_safe, new_survey_path %></li>
+                                    <li><a href="#motivate">Motivation</a></li>
+                                    <% if user_signed_in? %>
+                                      <li><%= link_to('Logout', destroy_user_session_path, :method=>'delete') %></li>
+                                    <% else %>
+                                      <li><%= link_to('Login', new_user_session_path) %></li>
+                                    <% end %>
+                                    <% if user_signed_in? %>
+                                      <li><%= link_to('Edit account', edit_user_registration_path) %></li>
+                                        <% if current_user.has_role? :admin %>
+                                          <li><%= link_to('Admin', users_path) %></li>
+                                        <% end %>
+                                    <% else %>
+                                      <li><%= link_to('Sign up', new_user_registration_path) %></li>
+                                    <% end %>
                                 </ul>
-                            </li>
-                            <li><a href="#prog_chrt">Prog. Chart</a></li>
-                            <li><a href="#motivate">Motivation</a></li>
-                        </ul>
-                        
-                    </div><!--/.nav-collapse -->
+
+                            </div><!--/.nav-collapse -->
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
         <div class="container">
           <!-- add flash message logic here -->
