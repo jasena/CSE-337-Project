@@ -10,7 +10,7 @@ class ExercisesController < ApplicationController
   def update
     @exercise = Exercise.find(params[:id])
     if @exercise.update_attributes(params[:exercise])
-      flash[:notice] = "Successfully updated workout titled: #{@exercise.id}"
+      flash[:notice] = "Successfully updated the exercise titled: #{@exercise.id}"
     end
     redirect_to root_url
   end
@@ -18,7 +18,7 @@ class ExercisesController < ApplicationController
   def destroy
     @exercise = Exercise.find(params[:id])
     @exercise.destroy unless @exercise.nil?
-    flash[:notice] = "Deleted the movie titled: #{@exercise.id}"
+    flash[:notice] = "Deleted the exercise titled: #{@exercise.id}"
     redirect_to root_url
   end
   

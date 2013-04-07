@@ -1,16 +1,19 @@
 CSE337Project::Application.routes.draw do
   authenticated :user do
-    root :to => 'days#index'
+  root :to => "days#index"
   end
   root :to => "days#index"
   devise_for :users
   resources :users
   resources :days
-
-  resources :workouts
-  #root :to => 'days#index'
-
   resources :surveys
+  resources :workouts
+  resources :motivation
+  resources :quotes, :path => 'motivation'
+  match '/options/index', :to => 'options#index', :as => :options_index
+  match '/motivation_options', :to => 'motivation_options#index', :as => :motivation_options
+  #root :to => 'days#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

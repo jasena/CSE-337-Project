@@ -1,0 +1,41 @@
+<h2>Motivational quotes and settings.</h2>
+
+<hr />
+<div class="row-fluid">
+	<div class="span6">
+		<a href="<%= new_motivation_path %>">
+			<div class="hero-unit" style="text-align:center; vertical-align:text-middle;">
+				<span style="color:black;font-weight:bold">Add</span>
+			</div>
+		</a>
+	</div>
+	<div class="span6">
+		<a href="<%= quote_options_path %>">
+			<div class="hero-unit" style="text-align:center; vertical-align:text-middle;">
+				<span style="color:black;font-weight:bold">Appearance</span>
+			</div>
+		</a>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="span12 hero-unit">
+		<table style="width:100%" border="2px" cellpadding="4px">
+		<caption><strong>List of Motivational Quotes</strong></caption>
+			<tbody>
+				<tr>
+					<th width="50%">Quote</th>
+					<th width="40%">Author</th>
+					<th colspan="2" width="10%">Options</th>
+				</tr>
+				<% @quote.each do |quote|  %>
+				<tr>
+					<td><%= quote.content %></td>
+					<td><%= quote.author %></td>
+					<td width="5%" style="text-align:center"><%= link_to 'Edit'.html_safe, edit_motivation_path(quote) %></td>
+					<td width="5%" style="text-align:center"><%= link_to 'Delete'.html_safe, motivation_path(quote), :method => "delete" %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130404001604) do
+ActiveRecord::Schema.define(:version => 20130407024349) do
 
   create_table "days", :force => true do |t|
     t.string   "exercises"
@@ -26,6 +26,13 @@ ActiveRecord::Schema.define(:version => 20130404001604) do
     t.text     "ecto"
     t.text     "meso"
     t.text     "endo"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "quotes", :force => true do |t|
+    t.text     "content"
+    t.string   "author"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

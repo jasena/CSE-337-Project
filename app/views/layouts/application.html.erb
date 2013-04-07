@@ -29,32 +29,30 @@
         <div class="navbar navbar-inverse navbar-fixed-top">
                     <div class="navbar-inner">
                         <div class="container">
-                            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </a>
-                            <a class="brand" href="#">Movie Manager</a>
+							<%= link_to "Fitness Helper", root_path, :class => "brand" %>
                             <div class="nav-collapse collapse">
                                 <ul class="nav">
-                                    <li class="active"><%= link_to 'W/O Log'.html_safe, days_path %></li>
-                                    <li><%= link_to 'Survey'.html_safe, new_survey_path %></li>
-                                    <li><a href="#motivate">Motivation</a></li>
-                                    <% if user_signed_in? %>
-                                      <li><%= link_to('Logout', destroy_user_session_path, :method=>'delete') %></li>
-                                    <% else %>
-                                      <li><%= link_to('Login', new_user_session_path) %></li>
-                                    <% end %>
-                                    <% if user_signed_in? %>
-                                      <li><%= link_to('Edit account', edit_user_registration_path) %></li>
-                                        <% if current_user.has_role? :admin %>
-                                          <li><%= link_to('Admin', users_path) %></li>
+									<% if !user_signed_in? %>
+										<li><%= link_to 'Workout Log'.html_safe, days_path %></li>
+										<li><%= link_to 'Motivation'.html_safe, motivation_index_path %></li>
+										<li><%= link_to 'Survey'.html_safe, new_survey_path %></li>
+										<li><%= link_to('Login', new_user_session_path) %></li>
+										<li><%= link_to('Sign up', new_user_registration_path) %></li>
+									<% else %>
+										<li><%= link_to 'Workout Log'.html_safe, days_path %></li>
+										<li><a href="#" style="color:red">Exercise Program</a></li>
+										<li><a href="#" style="color:red">Food Database</a></li>
+										<li><a href="#" style="color:red">Eating Tips</a></li>
+										<li><%= link_to 'Motivation'.html_safe, motivation_index_path %></li>
+										<li><a href="#" style="color:red">Progress Chart</a></li>
+										<li><%= link_to 'Survey'.html_safe, new_survey_path %></li>
+										<li><%= link_to 'Options'.html_safe, options_index_path %></li>
+										<% if current_user.has_role? :admin %>
+											<li><%= link_to('Admin', users_path) %></li>
                                         <% end %>
-                                    <% else %>
-                                      <li><%= link_to('Sign up', new_user_registration_path) %></li>
+										<li><%= link_to('Logout', destroy_user_session_path, :method=>'delete') %></li>
                                     <% end %>
                                 </ul>
-
                             </div><!--/.nav-collapse -->
                         </div>
                     </div>
@@ -80,7 +78,7 @@
           <div style="text-align: center; margin-top: 20px;">
             <hr>
             <footer>
-                <p>&copy; CSE/CIT337 Winter 2013</p>
+                <p>&copy; CSE/CIT 337 - Winter 2013</p>
             </footer>
           </div>
         </div> <!-- /container -->
