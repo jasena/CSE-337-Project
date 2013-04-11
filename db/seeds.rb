@@ -72,7 +72,7 @@ Day.create(:exercises => '', :date =>'2013-03-27')
 Day.create(:exercises => '', :date =>'2013-03-28')
 Day.create(:exercises => '', :date =>'2013-03-29')
 Day.create(:exercises => '', :date =>'2013-03-30')
-Day.create(:exercises => '', :date =>'2013-03-31')
+Day.create(:exercises =>   '', :date =>'2013-03-31')
 
 =end
 
