@@ -74,12 +74,14 @@ Day.create(:exercises => '', :date =>'2013-03-29')
 Day.create(:exercises => '', :date =>'2013-03-30')
 Day.create(:exercises => '', :date =>'2013-03-31')
 
+=end
+
 # Seeds the Def table.
 Def.create(ecto:"The typical ectomorph is a person who exhibits low levels of strength and size prior to training. They are usually tall and thin, with relatively low levels of body fat and small, narrow bones. Although their smaller joint structure often serves as an impediment in strength and power sports, they do tend to excel in endurance activities due to what is typically a higher-than-average proportion of slow twitch muscle fibers. Their fast metabolisms often make it difficult to gain weight of any type when following a more conventional dietary approach.",
            meso:"These are the oft-referred-to genetically gifted individuals. They tend to exhibit low levels of body fat and impressive muscular development even prior to training. Their thick, wide bone structure is more conducive to building muscle, giving them a decided advantage in strength and power sports such as football, wrestling, and Olympic lifting.",
            endo:"An Endomorph is basically someone who has trouble losing fat but gains fat and muscle easily. They are characterized by flabby and rounded muscles and have a mushy look to them. Basically Endomorph's biggest challenge is dropping the weight. Once that has been accomplished with a careful diet the fat can be kept off and the muscle will come at a steady pace.")
 		   
-# Seeds the User table?
+# Seeds the User table.
 puts 'ROLES'
 YAML.load(ENV['ROLES']).each do |role|
 Role.find_or_create_by_name({ :name => role }, :without_protection => true)
@@ -93,6 +95,8 @@ user.add_role :admin
 user2 = User.find_or_create_by_email :name => 'Second User', :email => 'user2@example.com', :password => 'changeme', :password_confirmation => 'changeme'
 puts 'user: ' << user2.name
 user2.add_role :VIP
+
+=begin
 
 # Seeds the Quote table used to store for motivational quotes and sayings.
 Quote.create(:content => 'Pain is temporary, pride is forever.', :author => 'Unknown')
