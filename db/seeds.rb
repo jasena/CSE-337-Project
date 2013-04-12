@@ -96,11 +96,10 @@ user2 = User.find_or_create_by_email :name => 'Second User', :email => 'user2@ex
 puts 'user: ' << user2.name
 user2.add_role :VIP
 
-=begin
+
 
 # Seeds the Quote table used to store for motivational quotes and sayings.
 Quote.create(:content => 'Pain is temporary, pride is forever.', :author => 'Unknown')
 Quote.create(:content => 'How am I to know what I can achieve if I quit?', :author => 'Jason Bishop, About Bodybuilding Reader')
 Quote.create(:content => 'Make the most of yourself, for that is all there is of you.', :author => 'Ralph Waldo Emerson, Philosopher & Writer')
 
-=end

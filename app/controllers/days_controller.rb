@@ -39,6 +39,7 @@ class DaysController < ApplicationController
   # GET /days/1
   # GET /days/1.json
   def show
+    #@day = Day.find_by_user_id(current_user)
     @day = Day.find(params[:id])
 
     respond_to do |format|
@@ -50,6 +51,7 @@ class DaysController < ApplicationController
   # GET /days/new
   # GET /days/new.json
   def new
+    #@day = current_user.days.build
     @day = Day.new
 
     respond_to do |format|

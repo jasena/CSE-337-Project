@@ -3,5 +3,5 @@
 <h3>User</h3>
 <p>User: <%= @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
-<br>
+<p><%= link_to "Survey Results".html_safe, survey_path(current_user) %></p>
 

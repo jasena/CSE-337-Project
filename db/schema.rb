@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130407024349) do
+ActiveRecord::Schema.define(:version => 20130411212904) do
 
   create_table "days", :force => true do |t|
     t.string   "exercises"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20130407024349) do
     t.float    "ques12"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|

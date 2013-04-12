@@ -35,7 +35,7 @@
 									<% if !user_signed_in? %>
 										<li><%= link_to 'Workout Log'.html_safe, days_path %></li>
 										<li><%= link_to 'Motivation'.html_safe, motivation_index_path %></li>
-										<li><%= link_to 'Survey'.html_safe, new_survey_path %></li>
+                                        <li><%= link_to 'Survey'.html_safe, new_survey_path %></li>
 										<li><%= link_to('Login', new_user_session_path) %></li>
 										<li><%= link_to('Sign up', new_user_registration_path) %></li>
 									<% else %>
@@ -46,11 +46,13 @@
 										<li><%= link_to 'Motivation'.html_safe, motivation_index_path %></li>
 										<li><a href="#" style="color:red">Progress Chart</a></li>
 										<li><%= link_to 'Survey'.html_safe, new_survey_path %></li>
-										<li><%= link_to 'Options'.html_safe, options_index_path %></li>
+                                        <li><%= link_to 'Profile', user_path(current_user) %></li>
+                                        <li><%= link_to 'Options'.html_safe, options_index_path %></li>
 										<% if current_user.has_role? :admin %>
 											<li><%= link_to('Admin', users_path) %></li>
                                         <% end %>
 										<li><%= link_to('Logout', destroy_user_session_path, :method=>'delete') %></li>
+
                                     <% end %>
                                 </ul>
                             </div><!--/.nav-collapse -->

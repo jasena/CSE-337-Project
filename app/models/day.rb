@@ -1,5 +1,6 @@
 class Day < ActiveRecord::Base
-  attr_accessible :exercises, :date, :month
+  #belongs_to :user
+  attr_accessible :exercises, :date, :month #:user_id
   has_many :workouts
   def self.search(search)
     if search
