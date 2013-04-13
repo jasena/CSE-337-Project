@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :surveys
-  #has_many :workouts
+  has_many :workouts
   #has_many :days
   rolify
   # Include default devise modules. Others available are:

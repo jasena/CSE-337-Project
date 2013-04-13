@@ -27,8 +27,8 @@ class WorkoutsController < ApplicationController
   # GET /workouts/new
   # GET /workouts/new.json
   def new
-    @workout = Workout.new
-    #@workout = current_user.workouts.build
+    #@workout = Workout.new
+    @workout = current_user.workouts.build
 
     respond_to do |format|
       format.html # new.html.erb

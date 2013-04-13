@@ -11,14 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411212904) do
+ActiveRecord::Schema.define(:version => 20130413181023) do
 
   create_table "days", :force => true do |t|
     t.string   "exercises"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "date"
-    t.boolean  "emp"
     t.string   "month"
   end
 
@@ -99,6 +98,7 @@ ActiveRecord::Schema.define(:version => 20130411212904) do
     t.string   "duration"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.integer  "user_id"
   end
 
 end

@@ -26,16 +26,11 @@
 
 
   <% @days.each do |day|  %>
-      <%@work = Workout.where("workout_date = ?", day.date)%>
+      <%@work = Workout.where("workout_date = ? and user_id = ?", day.date, current_user)%>
       <div class="span2 hero-unit" style="min-height:150px;height:auto !important;height:150px;">
 
 
-        <!--<%day.emp = false%>
-    	<%if day.emp == false%>
-    	  Workouts
-    	<%else%>
-    	  No Workouts
-    	  <%end%>-->
+
         <div class="name span2" style="float:right; text-align: right; vertical-align:text-top;">
           <strong>  </strong><%= "#{day.date.last(2)}" %> <!--Workouts:   day.exercises-->
 
