@@ -22,24 +22,23 @@
 
 <div class="span12">
 
-
-
-
-
   <% @days.each do |day|  %>
       <%@work = Workout.where("workout_date = ? and user_id = ?", day.date, current_user)%>
-      <div class="span2 hero-unit" style="min-height:150px;height:auto !important;height:150px;">
-
-
+      <div class="span2 hero-unit" style="min-height:150px;height:150px;">
 
         <div class="name span2" style="float:right; text-align: right; vertical-align:text-top;">
-          <strong>  </strong><%= "#{day.date.last(2)}" %> <!--Workouts:   day.exercises-->
-
+          <%= "#{day.date.last(2)}" %> <!--Workouts:   day.exercises-->
         </div>
 
-        <div  >
+        <div>
+          <% workout_num = 0 %>
           <% @work.each do |a| %>
-              <li><%= "#{a.name}" %>  </li>
+              <% if workout_num < 3 %>
+                  <li><%="#{a.name}"%></li>
+                  <% workout_num = workout_num + 1 %>
+              <% else %>
+                  <% break %>
+              <% end %>
           <% end %>
         </div>
 
@@ -53,12 +52,15 @@
         </div>
 
         <div class="span1" style="float: right; text-align: right;">
-          <%= link_to "Show", day_path(day.id) %>           <!--date.last(2)-->
+          <% if workout_num < 3 %>
+            <%= link_to "Details", day_path(day.id) %>
+          <% else %>
+            <%= link_to "More", day_path(day.id) %>
+          <% end %>
+
         </div>
 
-
       </div>
-
 
   <% end %>
 </div>
