@@ -1,0 +1,26 @@
+<%= form_for(@food, :html => { :class => "form-horizontal" } ) do |f| %>
+    <div class="control-group">
+      <%= f.label :Name, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_field :Name, :class => 'input-xxlarge' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :Category, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_field :Category, :class => 'input-large' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :Description, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_area :Description, :class => 'span7', :rows => '5' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <%= f.button :submit %>
+      </div>
+    </div>
+<% end %>

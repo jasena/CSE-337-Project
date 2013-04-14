@@ -1,0 +1,24 @@
+<h3> Healthy Food Choices</h3>
+<hr/>
+<%= link_to "New", new_food_path()%>
+
+<% @foods.each do |food| %>
+ <div class="span10 hero-unit food">
+   <div class="name span6" style="float:left;">
+      <strong>Title:</strong> <%= food.Name %>
+   </div>
+   <div class="category span3" style="float: right;">
+      <strong>Category:</strong> <%= food.Category %>
+   </div>
+   <div class="desc span9">
+      <strong>Description:</strong><br/>
+      <%= food.Description %>
+   </div>
+   <div class="span9" style="text-align: right;">
+     <%= link_to "<i class='icon-pencil'></i>".html_safe, edit_food_path(food) %>
+   </div>
+   <div class="span9" style="text-align: right;">
+     <%= link_to "<i class='icon-trash'></i>".html_safe, food_path(food), :method => "delete" %>
+   </div>
+ </div>
+<% end %>

@@ -3,6 +3,7 @@ CSE337Project::Application.routes.draw do
   root :to => "days#index"
   devise_for :users
   resources :users
+  resources :foods
   resources :days
   resources :surveys
   resources :workouts
