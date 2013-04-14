@@ -1,3 +1,5 @@
+Group Members: Nicholas Swan, Christopher Feger, Derek Myers, Joseph Sena
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
