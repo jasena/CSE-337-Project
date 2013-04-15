@@ -13,7 +13,6 @@
     <%= form_tag(days_path, :method => "get") do %>
         <p>
           <%= select_tag(:search, options_for_select(@@month_choices, :selected => params[:search])) %><!--month_choices[time.month-1] -->
-          <%= select_tag(:search, options_for_select(@@month_choices, :selected => params[:search])) %><!--month_choices[time.month-1] -->
          <div style="margin-top:-48px;margin-left:223px;"> <%= submit_tag "Change month", :name => nil %></div>
         </p>
     <% end %>
@@ -29,15 +28,15 @@
       <%@work = Workout.where("workout_date = ? and user_id = ?", day.date, current_user)%>
       <div class="span2 hero-unit" style="min-height:150px;height:150px;">
 
-        <div class="name span2" style="float:right; text-align: right; vertical-align:text-top;">
+        <div class="name span2" style="float:right; text-align: right; vertical-align:text-top; margin-top: -20px; margin-right: -10px">
           <%= "#{day.date.last(2)}" %> <!--Workouts:   day.exercises-->
         </div>
 
-        <div>
+        <div class="workouts_for_day">
           <% workout_num = 0 %>
           <% @work.each do |a| %>
-              <% if workout_num < 3 %>
-                  <li><%="#{a.name}"%></li>
+              <% if workout_num < 4 %>
+                  <li><%= link_to "#{a.name}".html_safe, workout_path(a) %></li>
                   <% workout_num = workout_num + 1 %>
               <% else %>
                   <% break %>
@@ -51,16 +50,14 @@
 
         <div class="span1" style="float: right; text-align: right;">
           <!--<%#= link_to 'Delete', {:controller => "workouts", :action => 'destroy', :id => day.id}, :method => :delete %>-->
-
         </div>
 
         <div class="span1" style="float: right; text-align: right;">
-          <% if workout_num < 3 %>
-            <%= link_to "Details", day_path(day.id) %>
+          <% if workout_num < 4 %>
+            <%#= link_to "Details", day_path(day.id) %>
           <% else %>
             <%= link_to "More", day_path(day.id) %>
           <% end %>
-
         </div>
 
       </div>

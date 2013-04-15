@@ -12,3 +12,12 @@
  *= require_self
  *= require_tree .
  */
+body
+{
+    background-color: #bfbfbf!important;
+}
+.workouts_for_day
+{
+    font-size: 12px;
+    margin-left: -10px;
+}
