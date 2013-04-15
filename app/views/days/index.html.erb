@@ -6,18 +6,21 @@
 <% @@month_choices = ["January","February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"] %>
 
 <h3> Workouts for <%= "#{@month}" %> 2013</h3>
-
-<%= link_to 'New Workout', new_workout_path %>
+<% if user_signed_in? %>
+    <%= link_to 'New Workout', new_workout_path %>
+<% end %>
 <div style="float: right; margin-top:-40px;margin-right: 70px;" >
     <%= form_tag(days_path, :method => "get") do %>
         <p>
+          <%= select_tag(:search, options_for_select(@@month_choices, :selected => params[:search])) %><!--month_choices[time.month-1] -->
           <%= select_tag(:search, options_for_select(@@month_choices, :selected => params[:search])) %><!--month_choices[time.month-1] -->
          <div style="margin-top:-48px;margin-left:223px;"> <%= submit_tag "Change month", :name => nil %></div>
         </p>
     <% end %>
 </div>
 <hr>
-<!--<%= link_to 'New Day', new_day_path %>-->
+
+<!--<%#= link_to 'New Day', new_day_path %>-->
 <br>
 
 <div class="span12">
