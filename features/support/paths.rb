@@ -16,6 +16,15 @@ module NavigationHelpers
     when /^the home\s?page$/
       '/'
 
+    when /the login page/
+      user_session_path
+
+    when /^the Create New Workout\s?page$/
+      '/workouts/new'
+
+    when /^the day\s?page$/
+      '/days'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

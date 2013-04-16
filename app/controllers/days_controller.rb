@@ -7,7 +7,8 @@ class DaysController < ApplicationController
 
 
   def index
-    @days = Day.search("January")
+    @days = Day.search("January", "2013")
+
     check
     time = Time.new
 
@@ -17,16 +18,16 @@ class DaysController < ApplicationController
     #  empty_search = true
     #end
 
-    if params[:search].nil?
+    if params[:search1].nil? && params[:search2].nil?
       # no search was submitted, or search params are all blank
-      @days = Day.search(time.strftime "%B")
+      @days = Day.search((time.strftime "%B"), (time.strftime "%Y"))
 
     else
       # a search was submitted
-      @days = Day.search(params[:search])
+      @days = Day.search(params[:search1],params[:search2])
     end
-    @month =   params[:search]
-
+    @month =  params[:search1]
+    @year =  params[:search2]
     #@days = Day.search("April")
     #@days = Day.search(params[:search])
 
@@ -110,19 +111,18 @@ class DaysController < ApplicationController
   end
 
   def check
-    d = Time.new(2013)
+    if params[:search2].nil?
+      d = Time.new(Time.now.year)
+    else
+      d = Time.new(params[:search2].to_i)
+    end
 
-    #m = '%02i' % @@mon
-    @days = Day.all#(:conditions => { :month=> @@month_choices[m.to_i] })
+    @days = Day.where('year LIKE ?', (d.strftime "%Y"))
     if @days.blank?
-      for i in (0..364)#@@dayspermonth[@month]
-        #d = '%02i' % i
-        #m = '%02i' % @month
-        #Day.create(:exercises  => '', :date =>"2013-#{m}-#{d}", :month => @@month_choices[@@mon])
+      for i in (0..364)
         t = d+i*(60*60*24)
-        Day.create(:exercises  => "", :date => ((t).strftime "%Y-%m-%d").to_s, :month => (t.strftime "%B"))
+        Day.create(:exercises  => "", :date => ((t).strftime "%Y-%m-%d").to_s, :month => (t.strftime "%B"), :year =>(t.strftime "%Y"))
       end
-      #@days = Day.all#(:conditions => { :date=> m })
     end
   end
 end

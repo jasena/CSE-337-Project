@@ -253,6 +253,17 @@ Then /^show me the page$/ do
   save_and_open_page
 end
 
+Given /a valid user$/ do
+  @user = User.create!({ :email => "username@example.com", :password => "password"})
+end
+
+Given /a logged in user$/ do
+  step "a valid user"
+  visit signin_url
+  fill_in "Email", :with => "username@example.com"
+  fill_in "Password", :with => "password"
+  click_button "Sign in"
+end
 Given /I have "(.*)" in workout database/ do |n|
   Workout.create(name: n)
 end
@@ -267,4 +278,6 @@ When /I edit workout with name "(.*)"/ do |n|
   within(:xpath, "//div[text()[contains(., '#{n}')]]/..") do
     find(:xpath, ".//a[contains(@href, 'edit')]").click
   end
+
+
 end
