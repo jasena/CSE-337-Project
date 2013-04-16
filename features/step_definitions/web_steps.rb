@@ -265,7 +265,7 @@ Given /a logged in user$/ do
   click_button "Sign in"
 end
 Given /I have "(.*)" in workout database/ do |n|
-  Workout.create(name: n)
+  Workout.create(name: n, kind: 'Cardio', workout_date: '2013-04-01', duration: '10 minutes')
 end
 
 When /I delete workout with name "(.*)"/ do |n|

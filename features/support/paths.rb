@@ -22,6 +22,9 @@ module NavigationHelpers
     when /^the Create New Workout\s?page$/
       '/workouts/new'
 
+    when /^the Show New Workout\s?page$/
+      '/workouts/1'
+
     when /^the day\s?page$/
       '/days'
 

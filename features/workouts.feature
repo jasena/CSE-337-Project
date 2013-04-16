@@ -27,17 +27,34 @@ Feature: Manager workouts
     And I should see "Running"
 
   Scenario: Delete workout
+    Given a valid user
+    When I go to the login page
+    And I fill in the following:
+      |Email|username@example.com|
+      |Password|password|
+    And I press "Sign in"
+    Then I should see "Signed in successfully."
+
     Given I have "Running" in workout database
     And I am on the home page
+    When I follow "Running"
     When I delete workout with name "Running"
     Then I should be on the day page
     And I should not see "Running"
 
   Scenario: Edit a workout
+    Given a valid user
+    When I go to the login page
+    And I fill in the following:
+      |Email|username@example.com|
+      |Password|password|
+    And I press "Sign in"
+    Then I should see "Signed in successfully."
+
     Given I have "Running" in workout database
     Given I am on the home page
-    When I edit workout with name "Running"
-    Then I should be on the edit "Running" page
+    When I follow "Running"
+    Then I should be on the show Workout page
     When I fill in "workout_name" with "Curling"
     And I fill in "workout_kind" with "Cardio"
     And I fill in "workout_workout_date_1i" with "2013"

@@ -15,10 +15,10 @@
       <%= food.Description %>
    </div>
    <div class="span9" style="text-align: right;">
-     <%= link_to "<i class='icon-pencil'></i>".html_safe, edit_food_path(food) %>
+     <%= link_to "Edit".html_safe, edit_food_path(food) %>
    </div>
    <div class="span9" style="text-align: right;">
-     <%= link_to "<i class='icon-trash'></i>".html_safe, food_path(food), :method => "delete" %>
+     <%= link_to "Delete".html_safe, food_path(food), :method => "delete" %>
    </div>
  </div>
 <% end %>

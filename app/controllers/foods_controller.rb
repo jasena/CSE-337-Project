@@ -9,10 +9,10 @@ class FoodsController < ApplicationController
 
   def update
     @food = Food.find(params[:id])
-    if @food.update_attributes(params[:foods])
+    if @food.update_attributes(params[:food])
       flash[:notice] = "Successfully updated product titled: #{@food.Name}"
     end
-    redirect_to root_url
+    redirect_to foods_url
   end
 
   def destroy
@@ -23,7 +23,7 @@ class FoodsController < ApplicationController
     else
       flash[:error] = "Could not delete the object"
     end
-    redirect_to root_url
+    redirect_to foods_url
   end
 
   def new
@@ -31,10 +31,10 @@ class FoodsController < ApplicationController
   end
 
   def create
-    @food = Food.new(params[:foods])
+    @food = Food.new(params[:food])
     @food.save
 
-    redirect_to root_url
+    redirect_to foods_url
   end
 
 end
