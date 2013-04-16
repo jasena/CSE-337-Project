@@ -35,7 +35,7 @@
 									<% if !user_signed_in? %>
 										<li><%= link_to 'Workout Log'.html_safe, days_path %></li>
 										<li><%= link_to 'Motivation'.html_safe, motivation_index_path %></li>
-                                        <li><%= link_to 'Survey'.html_safe, new_survey_path %></li>
+                                        <li><%#= link_to 'Survey'.html_safe, new_survey_path %></li>
 										<li><%= link_to('Login', new_user_session_path) %></li>
 										<li><%= link_to('Sign up', new_user_registration_path) %></li>
 									<% else %>

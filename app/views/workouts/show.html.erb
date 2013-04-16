@@ -16,7 +16,10 @@
         <span class="rating"> Type of Workout: <%= @workout.kind %> </span>
       </div>
       <div class="span9">
-        <span class="rating"> Duration of Workout: <%= @workout.duration %> </span>
+        <span class="duration"> Duration of Workout: <%= @workout.duration %> </span>
+      </div>
+      <div class="span9" style="text-align:right;">
+        <%= link_to "Delete".html_safe, workout_path(@workout), method: :delete %>
       </div>
 </div>
 

@@ -31,8 +31,14 @@
 				<tr>
 					<td><%= quote.content %></td>
 					<td><%= quote.author %></td>
-					<td width="5%" style="text-align:center"><%= link_to 'Edit'.html_safe, edit_motivation_path(quote) %></td>
-					<td width="5%" style="text-align:center"><%= link_to 'Delete'.html_safe, motivation_path(quote), :method => "delete" %></td>
+					<td width="5%" style="text-align:center">
+                      <% if user_signed_in? %>
+                        <%= link_to 'Edit'.html_safe, edit_motivation_path(quote) %>
+                      <% end %></td>
+					<td width="5%" style="text-align:center">
+                      <% if user_signed_in? %>
+                        <%= link_to 'Delete'.html_safe, motivation_path(quote), :method => "delete" %>
+                      <% end %></td>
 				</tr>
 				<% end %>
 			</tbody>
