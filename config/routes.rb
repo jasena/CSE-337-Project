@@ -1,6 +1,6 @@
 CSE337Project::Application.routes.draw do
-
-  root :to => "days#index"
+  
+  root :to => "main#index"
   devise_for :users
   resources :users
   resources :foods
@@ -9,6 +9,7 @@ CSE337Project::Application.routes.draw do
   resources :workouts
   resources :motivation
   resources :quotes, :path => 'motivation'
+  #match '/main', :to ==> 'main#index', :as => :main_index
   match '/options/index', :to => 'options#index', :as => :options_index
   match '/motivation_options', :to => 'motivation_options#index', :as => :motivation_options
 

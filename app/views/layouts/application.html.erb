@@ -29,30 +29,51 @@
         <div class="navbar navbar-inverse navbar-fixed-top">
                     <div class="navbar-inner">
                         <div class="container">
-							<%= link_to "Fitness Helper", root_path, :class => "brand" %>
+							<% if user_signed_in? %>
+								<%= link_to "Fitness Helper", root_path, :class => "brand" %>
+							<% else %>
+								<%= link_to "Fitness Helper", new_user_session_path, :class => "brand" %>
+							<% end %>
                             <div class="nav-collapse collapse">
                                 <ul class="nav">
 									<% if !user_signed_in? %>
-										<li><%= link_to 'Workout Log'.html_safe, days_path %></li>
-										<li><%= link_to 'Motivation'.html_safe, motivation_index_path %></li>
-                                        <li><%#= link_to 'Survey'.html_safe, new_survey_path %></li>
 										<li><%= link_to('Login', new_user_session_path) %></li>
-										<li><%= link_to('Sign up', new_user_registration_path) %></li>
+										<li><%= link_to('Sign Up', new_user_registration_path) %></li>
 									<% else %>
-										<li><%= link_to 'Workout Log'.html_safe, days_path %></li>
-										<li><a href="#" style="color:red">Exercise Program</a></li>
-										<li><%= link_to 'Eating Tips' .html_safe, foods_path %></li>
-										<li><a href="#" style="color:red">Eating Tips</a></li>
-										<li><%= link_to 'Motivation'.html_safe, motivation_index_path %></li>
-										<li><a href="#" style="color:red">Progress Chart</a></li>
-										<li><%= link_to 'Survey'.html_safe, new_survey_path %></li>
-                                        <li><%= link_to 'Profile', user_path(current_user) %></li>
-                                        <li><%= link_to 'Options'.html_safe, options_index_path %></li>
-										<% if current_user.has_role? :admin %>
-											<li><%= link_to('Admin', users_path) %></li>
-                                        <% end %>
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Exercise <b class="caret"></b></a>
+											<ul class="dropdown-menu">
+												<li><%= link_to 'View Workout Log'.html_safe, days_path %></li>
+												<li><%= link_to 'Create New Workout'.html_safe, new_workout_path %></li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Diet <b class="caret"></b></a>
+											<ul class="dropdown-menu">
+												<li><%= link_to 'View Eating Tips' .html_safe, foods_path %></li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Motivation <b class="caret"></b></a>
+											<ul class="dropdown-menu">
+												<li><%= link_to 'View Quotes'.html_safe, motivation_index_path %></li>
+												<li><%= link_to 'Create New Quote'.html_safe, new_motivation_path %></li>
+												<li><%= link_to 'View Appearance Options'.html_safe, motivation_options_path %></li>
+											</ul>
+										</li>
+										<!--<li><a href="#" style="color:red">Progress Chart</a></li>-->
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">User Data <b class="caret"></b></a>
+											<ul class="dropdown-menu">
+												<li><%= link_to 'View Profile', user_path(current_user) %></li>
+												<li><%= link_to 'View User Options'.html_safe, options_index_path %></li>
+												<% if current_user.has_role? :admin %>
+													<li><%= link_to('View Admin Options', users_path) %></li>
+												<% end %>
+												<li><%= link_to 'Fill Out New Survey'.html_safe, new_survey_path %></li>
+											</ul>
+										</li>
 										<li><%= link_to('Logout', destroy_user_session_path, :method=>'delete') %></li>
-
                                     <% end %>
                                 </ul>
                             </div><!--/.nav-collapse -->

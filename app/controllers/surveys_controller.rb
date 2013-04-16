@@ -1,4 +1,5 @@
 class SurveysController < ApplicationController
+  before_filter :authenticate_user!
   def new
       @survey = current_user.surveys.build
       @defs = Def.new

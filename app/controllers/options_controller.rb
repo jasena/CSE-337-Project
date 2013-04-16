@@ -1,4 +1,5 @@
 class OptionsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /options
   # GET /options.json
   def index

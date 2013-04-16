@@ -1,4 +1,5 @@
 class DaysController < ApplicationController
+  before_filter :authenticate_user!
   # GET /days
   # GET /days.json
   @@dayspermonth = [0,31,28,31,30,31,30,31,31,30,31,30,31]

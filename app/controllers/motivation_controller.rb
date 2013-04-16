@@ -1,4 +1,5 @@
 class MotivationController < ApplicationController
+  before_filter :authenticate_user!
   # GET /motivation
   # GET /motivation.json
   def index

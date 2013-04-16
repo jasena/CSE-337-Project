@@ -1,8 +1,6 @@
-class MotivationOptionsController < ApplicationController
-  before_filter :authenticate_user!
-  # GET /motivation
-  # GET /motivation.json
-  def index
+class MainController < ApplicationController
+	before_filter :authenticate_user!
+	def index
     @quotecount = Quote.count('id')
 	
 	r = Random.new
@@ -17,6 +15,8 @@ class MotivationOptionsController < ApplicationController
 	
     respond_to do |format|
       format.html # index.html.erb
+      format.json { render json: @quote }
     end
   end
+
 end
