@@ -9,11 +9,10 @@ class MotivationOptionsController < ApplicationController
 	
 	if @quotecount > 0
 		@rid = r.rand(0...@quotecount) + 1
+		@quote = Quote.find(@rid)
 	else
 		@rid = 0
 	end
-		
-	@quote = Quote.find(@rid)
 	
     respond_to do |format|
       format.html # index.html.erb

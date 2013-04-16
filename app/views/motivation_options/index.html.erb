@@ -6,7 +6,9 @@
 		<div class="hero-unit" style="text-align:center; vertical-align:text-middle;">
 			<span>You have <strong><%= @quotecount %></strong> quotes saved.</span>
 			<br />
+			<% if @quotecount != 0 %>
 			<span>Here is a random quote to encourage you: <strong>"<%= @quote.content %>", - <%= @quote.author %></strong></span>
+			<% end %>
 		</div>
 	</div>
 </div>
