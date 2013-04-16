@@ -35,10 +35,22 @@ Feature: Manager workouts
     And I press "Sign in"
     Then I should see "Signed in successfully."
 
-    Given I have "Running" in workout database
-    And I am on the home page
+    Given I am on the home page
+    When I follow "New Workout"
+    Then I should be on the Create New Workout page
+    When I fill in "workout_name" with "Running"
+    And I select "Cardio" from "workout_kind"
+    And I select "2013" from "workout_workout_date_1i"
+    And I select "April" from "workout_workout_date_2i"
+    And I select "1" from "workout_workout_date_3i"
+    And I fill in "workout_duration" with "10 minutes"
+    And I press "submit"
+    Then I follow "Back"
+    Then I should be on the day page
+    And I should see "Running"
+
     When I follow "Running"
-    When I delete workout with name "Running"
+    When I follow "Delete"
     Then I should be on the day page
     And I should not see "Running"
 
@@ -51,15 +63,27 @@ Feature: Manager workouts
     And I press "Sign in"
     Then I should see "Signed in successfully."
 
-    Given I have "Running" in workout database
     Given I am on the home page
+    When I follow "New Workout"
+    Then I should be on the Create New Workout page
+    When I fill in "workout_name" with "Running"
+    And I select "Cardio" from "workout_kind"
+    And I select "2013" from "workout_workout_date_1i"
+    And I select "April" from "workout_workout_date_2i"
+    And I select "1" from "workout_workout_date_3i"
+    And I fill in "workout_duration" with "10 minutes"
+    And I press "submit"
+    Then I follow "Back"
+    Then I should be on the day page
+    And I should see "Running"
+
     When I follow "Running"
     Then I should be on the show Workout page
     When I fill in "workout_name" with "Curling"
-    And I fill in "workout_kind" with "Cardio"
-    And I fill in "workout_workout_date_1i" with "2013"
-    And I fill in "workout_workout_date_2i" with "January"
-    And I fill in "workout_workout_date_3i" with "02"
+    And I select "Weight Lifting" from "workout_kind"
+    And I select "2013" from "workout_workout_date_1i"
+    And I select "April" from "workout_workout_date_2i"
+    And I select "2" from "workout_workout_date_3i"
     And I fill in "workout_duration" with "15 reps"
     And I press "submit"
     Then I should be on the day page

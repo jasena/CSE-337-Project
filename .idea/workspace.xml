@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ad61a18-916a-431e-8de8-daf3d2a629fe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/motivation/index.html.erb" afterPath="$PROJECT_DIR$/app/views/motivation/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/workouts/show.html.erb" afterPath="$PROJECT_DIR$/app/views/workouts/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/workouts.feature" afterPath="$PROJECT_DIR$/features/workouts.feature" />
     </list>
     <ignored path="CSE-337-Project.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0ad61a18-916a-431e-8de8-daf3d2a629fe" time="1366135065375" ignored="false" />
+    <file path="/Dummy.txt" changelist="0ad61a18-916a-431e-8de8-daf3d2a629fe" time="1366139492184" ignored="false" />
     <file path="/workout.rb" changelist="0ad61a18-916a-431e-8de8-daf3d2a629fe" time="1365882817809" ignored="false" />
     <file path="dbtable:/1e0be71d/887e10d3-b672-4837-a60b-2d60748b2ad0/..movies" changelist="0ad61a18-916a-431e-8de8-daf3d2a629fe" time="1365882931777" ignored="false" />
     <file path="/show.html.erb" changelist="0ad61a18-916a-431e-8de8-daf3d2a629fe" time="1366136062152" ignored="false" />
@@ -57,7 +54,7 @@
       <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/foods/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="16" selection-start="194" selection-end="194" vertical-scroll-proportion="-3.9230769">
+            <state line="6" column="16" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -66,10 +63,8 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/workouts/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="52" selection-start="318" selection-end="318" vertical-scroll-proportion="-7.1923075">
-              <folding>
-                <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="11" column="52" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,7 +72,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/days/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="590" selection-end="614" vertical-scroll-proportion="-5.230769">
+            <state line="21" column="0" selection-start="590" selection-end="614" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -86,16 +81,37 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/motivation/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/motivation/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="24" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.68">
+            <state line="35" column="24" selection-start="1098" selection-end="1098" vertical-scroll-proportion="-15.769231">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="defs" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/92aebeeb/5d144ba8-0740-4a7a-a557-ee2c6242ebb8/..defs">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workouts.feature" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/features/workouts.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="20" selection-start="1887" selection-end="1887" vertical-scroll-proportion="0.2773893">
               <folding />
             </state>
           </provider>
@@ -104,10 +120,8 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/foods/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="29" selection-start="620" selection-end="620" vertical-scroll-proportion="-12.423077">
-              <folding>
-                <element signature="e#613#639#0" expanded="true" />
-              </folding>
+            <state line="19" column="29" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,10 +150,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/days_controller.rb" />
         <option value="dbtable:/92aebeeb/5d144ba8-0740-4a7a-a557-ee2c6242ebb8/..users" />
         <option value="$PROJECT_DIR$/features/step_definitions/web_steps.rb" />
-        <option value="$PROJECT_DIR$/features/workouts.feature" />
         <option value="$PROJECT_DIR$/features/support/paths.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/views/surveys/new.html.erb" />
@@ -152,6 +164,8 @@
         <option value="$PROJECT_DIR$/app/views/days/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/motivation/index.html.erb" />
+        <option value="dbtable:/92aebeeb/5d144ba8-0740-4a7a-a557-ee2c6242ebb8/..defs" />
+        <option value="$PROJECT_DIR$/features/workouts.feature" />
       </list>
     </option>
   </component>
@@ -192,6 +206,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -220,33 +236,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CSE-337-Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CSE-337-Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="motivation" />
+              <option name="myItemId" value="features" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -266,8 +256,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -283,53 +271,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="JdbcConsole.Extract.IncludeHeader" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="last.edited.regexp" value="" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
+    <property name="last.edited.regexp" value="" />
     <property name="JdbcConsole.Extract.IncludeRowNumbers" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Joe\RubymineProjects\CSE-337-Project\app\views\foods" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Development: CSE-337-Project">
-    <configuration default="false" name="Add a workout" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
-      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
-      <module name="CSE-337-Project" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="ANSICON" value="" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/features/workouts.feature" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^Add a workout$" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Cucumber.Edit a workout">
     <configuration default="false" name="workouts" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="CSE-337-Project" />
@@ -440,6 +394,40 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Edit a workout" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
+      <module name="CSE-337-Project" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="ANSICON" value="" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/features/workouts.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^Edit a workout$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
@@ -567,6 +555,13 @@
       <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -596,13 +591,6 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
@@ -704,19 +692,19 @@
       <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
       <item index="2" class="java.lang.String" itemvalue="Rails.Production: CSE-337-Project" />
       <item index="3" class="java.lang.String" itemvalue="Rails.Development: CSE-337-Project" />
-      <item index="4" class="java.lang.String" itemvalue="Cucumber.Add a workout" />
-      <item index="5" class="java.lang.String" itemvalue="Cucumber.workouts" />
-      <item index="6" class="java.lang.String" itemvalue="Cucumber.Delete workout" />
-      <item index="7" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="8" class="java.lang.String" itemvalue="Rake.routes" />
+      <item index="4" class="java.lang.String" itemvalue="Cucumber.workouts" />
+      <item index="5" class="java.lang.String" itemvalue="Cucumber.Delete workout" />
+      <item index="6" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="7" class="java.lang.String" itemvalue="Rake.routes" />
+      <item index="8" class="java.lang.String" itemvalue="Cucumber.Edit a workout" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Rake.routes" />
-        <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate" />
-        <item index="2" class="java.lang.String" itemvalue="Cucumber.Delete workout" />
+        <item index="0" class="java.lang.String" itemvalue="Cucumber.Edit a workout" />
+        <item index="1" class="java.lang.String" itemvalue="Rake.routes" />
+        <item index="2" class="java.lang.String" itemvalue="Rake.db:migrate" />
         <item index="3" class="java.lang.String" itemvalue="Cucumber.Delete workout" />
-        <item index="4" class="java.lang.String" itemvalue="Cucumber.workouts" />
+        <item index="4" class="java.lang.String" itemvalue="Cucumber.Delete workout" />
       </list>
     </recent_temporary>
   </component>
@@ -769,17 +757,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="860" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1313394" sideWeight="0.65427" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1313394" sideWeight="0.6556474" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14414415" sideWeight="0.18413979" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2613784" sideWeight="0.6552198" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12613784" sideWeight="0.6556474" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39944905" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34202453" sideWeight="0.46728015" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3447802" sideWeight="0.9980276" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3443526" sideWeight="0.9980276" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -847,102 +835,70 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/workout.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/days_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="48" selection-start="2856" selection-end="2856" vertical-scroll-proportion="0.35634744">
-          <folding />
-        </state>
+        <state line="117" column="48" selection-start="2856" selection-end="2856" vertical-scroll-proportion="0.35634744" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/foods/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="54" selection-start="446" selection-end="446" vertical-scroll-proportion="0.4">
-          <folding />
-        </state>
+        <state line="10" column="54" selection-start="446" selection-end="446" vertical-scroll-proportion="0.4" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/food.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/days/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/foods_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="28" selection-start="615" selection-end="615" vertical-scroll-proportion="0.28381374">
-          <folding />
-        </state>
+        <state line="27" column="28" selection-start="615" selection-end="615" vertical-scroll-proportion="0.28381374" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/workouts_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="50" selection-start="271" selection-end="271" vertical-scroll-proportion="-0.26385808">
-          <folding />
-        </state>
+        <state line="11" column="50" selection-start="271" selection-end="271" vertical-scroll-proportion="-0.26385808" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/foods/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="16" selection-start="194" selection-end="194" vertical-scroll-proportion="-3.9230769">
+        <state line="6" column="16" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/days/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="46" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.405">
-          <folding />
-        </state>
+        <state line="28" column="46" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.405" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/foods/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="29" selection-start="620" selection-end="620" vertical-scroll-proportion="-12.423077">
-          <folding>
-            <element signature="e#613#639#0" expanded="true" />
-          </folding>
+        <state line="19" column="29" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="40" selection-start="1822" selection-end="1822" vertical-scroll-proportion="0.41262135">
-          <folding />
-        </state>
+        <state line="37" column="40" selection-start="1822" selection-end="1822" vertical-scroll-proportion="0.41262135" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/workouts/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="52" selection-start="318" selection-end="318" vertical-scroll-proportion="-7.1923075">
-          <folding>
-            <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="11" column="52" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/days/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="590" selection-end="614" vertical-scroll-proportion="-5.230769">
+        <state line="21" column="0" selection-start="590" selection-end="614" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -956,7 +912,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/motivation/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="24" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.68">
+        <state line="35" column="24" selection-start="1098" selection-end="1098" vertical-scroll-proportion="-15.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/92aebeeb/5d144ba8-0740-4a7a-a557-ee2c6242ebb8/..defs">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/workouts.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="20" selection-start="1887" selection-end="1887" vertical-scroll-proportion="0.2773893">
           <folding />
         </state>
       </provider>
